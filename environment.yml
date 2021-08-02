@@ -1,0 +1,16 @@
+name: binder-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - cython
+  - scipy
+  - ultranest
+  - pip
+  - pandas
+  - h5py
+  - corner
+  - flake8
+  - coveralls
+  - pytest-html

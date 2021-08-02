@@ -42,14 +42,6 @@
 #  https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html
 FROM jupyter/scipy-notebook:latest
 
-# switch to user root
-USER root
-# install compiler for stan
-RUN apt-get update -y && apt-get install -y build-essential
-
-# switch to user (NB_UID=jovyan actually)
-USER ${NB_UID}
-
 # install the necessary packages
 RUN conda install -y ultranest==3.3.0
 
